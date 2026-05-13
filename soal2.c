@@ -5,6 +5,7 @@ int main(){
     int n,m;
     char pulau [100][100];
     int b = 0;
+    int c = 0;
 
     scanf ("%d",&n);
     scanf ("%d", &m);
@@ -15,15 +16,18 @@ int main(){
         int a =0;
         for (int j = 0; j <m; j ++){
         if (pulau[i][j] =='1'){
-                a++;
+            a++;
+        }
+        }
         if (a > b){
-                b = a;
+            b = a;
         }
-        }
+        if ( a>0 ){
+           c ++;
+        } 
     }
-}
 
-    printf ("ISLANDS %d\n",n);
+    printf ("ISLANDS %d\n",c);
     printf ("LARGEST %d\n",b);
     return 0;
 }
